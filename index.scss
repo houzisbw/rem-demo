@@ -1,0 +1,87 @@
+//iphone6设计稿，尺寸要除以2
+//37.5px是ip6的宽度的1/10
+@function px2rem($px){
+  $rem:37.5px;
+  @return ($px / $rem)+rem;
+}
+.header{
+  height:px2rem(40px);
+  box-sizing: border-box;
+  width:100%;
+  padding-left:px2rem(23px);
+  background-color: #ff5d56;
+  line-height: px2rem(40px);
+  .header-item{
+    font-size: px2rem(16px);
+    color:#ffcdce;
+    float:left;
+    margin-right: px2rem(20px);
+    &:hover{
+      font-size: px2rem(17px);
+      color:white;
+    }
+  }
+}
+.banner-content{
+  position: relative;
+  .banner{
+    display: block;
+    width:100%;
+    height:px2rem(190px);
+    background-size: cover;
+  }
+  .banner-word{
+    color:#fff;
+    position: absolute;
+    font-size: px2rem(16px);
+    left:px2rem(15px);
+    bottom:px2rem(15px);
+  }
+}
+.news-content{
+  box-sizing: border-box;
+  .news-item{
+    padding-left:px2rem(15px);
+    padding-right:px2rem(15px);
+    width:100%;
+    height:px2rem(90px);
+    box-sizing: border-box;
+  }
+  .item-container{
+    height:100%;
+    border-bottom:px2rem(1px) solid #d7d7d7;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+  }
+  .news-img{
+    float:left;
+    width:px2rem(95px);
+    height:px2rem(70px);
+    display: block;
+    margin-top: px2rem(10px);
+    overflow: hidden;
+    margin-right: px2rem(15px);
+  }
+  .news-word{
+    font-size: px2rem(17px);
+    color:#404040;
+    margin-top: px2rem(16px);
+    overflow: hidden;
+    line-height: px2rem(20px);
+  }
+  .time{
+    position: absolute;
+    left:px2rem(105px);
+    bottom:px2rem(10px);
+    color:#888;
+    font-size: px2rem(12px);
+  }
+  .number{
+    position: absolute;
+    color:#888;
+    font-size: px2rem(12px);
+    right:px2rem(4px);
+    bottom:px2rem(10px);
+  }
+}
